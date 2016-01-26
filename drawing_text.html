@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<!-- python -m SimpleHTTPServer -->
+		<canvas id="c" width="600" height="600"></canvas>
+
+		<script type="text/javascript">
+			var c = document.querySelector("#c");
+			var ctx = c.getContext("2d");
+
+
+			ctx.strokeStyle = "black";
+
+
+			ctx.font = "36pt Impact";
+			ctx.textAlign = "center";
+
+			ctx.fillStyle = "white";
+			ctx.fillText("CANVAS MEMES!", c.width/2, 40);
+
+
+			ctx.strokeStyle = "black"
+			ctx.lineWidth = 3;
+			ctx.strokeText("CANVAS MEMES!", c.width/2, 40);
+
+		</script>
+	</body>
+</html>

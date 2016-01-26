@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<!-- python -m SimpleHTTPServer -->
+		<canvas id="c" width="200" height="200"></canvas>
+
+		<script type="text/javascript">
+			var c = document.querySelector("#c");
+			var ctx = c.getContext("2d");
+
+			//beginPath tells canvas we are about to begin a new shape
+			ctx.beginPath();
+			//moveTo moves a "pen" to the x and y coordinates passed to it relative to the page
+			ctx.moveTo(50, 50);
+			//lineTo puts the pen down and makes a mark to the position.
+			ctx.lineTo(50, 150);
+			ctx.lineTo(150, 150);
+			ctx.lineTo(150, 50);
+			ctx.lineTo(50, 50);
+			// stroke just creates the shape with no fill
+			ctx.stroke();
+
+			var degrees = 10;
+			var radians = degrees * (Math.PI/180);
+			ctx.rotate(radians);
+			ctx.translate(100,0);
+			// ctx.translate(20,40);
+			ctx.beginPath();
+			ctx.moveTo(75, 75);
+			ctx.lineTo(125, 75);
+			ctx.lineTo(125, 125);
+			ctx.lineTo(75, 75);
+			// fill creates a filled shape
+			ctx.fill();
+			// ctx.stroke();
+
+
+
+
+		</script>
+	</body>
+</html>
