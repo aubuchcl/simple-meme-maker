@@ -22,17 +22,21 @@
 			// ctx.clearRect(0, 0, c.width, c.height);
 
 
-			var x = ctx.getImageData(0,0,c.width,c.height);
-			var green = 37;
 
-			for(var i=0;x.data.length > i;i++){
-				if(i === green){
-					x.data[i] = 255;
-					green += 40;
+			//change every 10th pixel to green
+			var toGreen = function(){
+				var x = ctx.getImageData(0,0,c.width,c.height);
+				var green = (4 * 10) - 3;
+
+				for(var i=0;x.data.length > i;i++){
+					if(i === green){
+						x.data[i] = 255;
+						green += 40;
+					}
 				}
-			}
 
-			ctx.putImageData(x, 0, 0);
+				ctx.putImageData(x, 0, 0);
+			}
 
 		</script>
 	</body>
